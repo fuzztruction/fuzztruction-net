@@ -50,7 +50,7 @@ index 3927537..5c8ec29 100644
      for root, dirs, files in os.walk(path):
          for file in files:
 +            full_path = os.path.join(root, file)
-+            if [blocked_path_postfix in full_path for blocked_path_postfix in blocked_path_postfixes]:
++            if any([blocked_path_postfix in full_path for blocked_path_postfix in blocked_path_postfixes]):
 +                print(f"skipping blocked file {full_path}")
 +                continue
              if file.endswith(('.cpp', '.c', '.cc', '.h', '.hh', '.h.in')):
@@ -61,7 +61,7 @@ index 3927537..5c8ec29 100644
      for root, dirs, files in os.walk(path):
          for file in files:
 +            full_path = os.path.join(root, file)
-+            if [blocked_path_postfix in full_path for blocked_path_postfix in blocked_path_postfixes]:
++            if any([blocked_path_postfix in full_path for blocked_path_postfix in blocked_path_postfixes]):
 +                print(f"skipping blocked file {full_path}")
 +                continue
              if file.endswith(('.cpp', '.c', '.cc', '.h', '.hh', '.h.in')):
@@ -72,7 +72,7 @@ index 3927537..5c8ec29 100644
      for root, dirs, files in os.walk(path):
          for file in files:
 +            full_path = os.path.join(root, file)
-+            if [blocked_path_postfix in full_path for blocked_path_postfix in blocked_path_postfixes]:
++            if any([blocked_path_postfix in full_path for blocked_path_postfix in blocked_path_postfixes]):
 +                print(f"skipping blocked file {full_path}")
 +                continue
              if file.endswith(('.cpp', '.c', '.cc', '.h', '.hh', '.h.in')):
